@@ -48,7 +48,7 @@ jobs:
           # store variable for future use
           # echo "version=$version" >> $GITHUB_ENV
           
-          TG_SERVER_VERSION=$(cd upstream && cat telegram-bot-api/CMakeLists.txt | grep TelegramBotApi | cut -d " " -f3)
+          TG_SERVER_VERSION=$(cat telegram-bot-api/CMakeLists.txt | grep TelegramBotApi | cut -d " " -f3)
           # echo "TG_SERVER_VERSION=${TG_SERVER_VERSION}" >> $GITHUB_ENV
           echo ::set-output name=latest_tag::${TG_SERVER_VERSION}
           
