@@ -17,10 +17,12 @@ jobs:
     name: Build Image
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout current repo  
+      - 
+        name: Checkout current repo  
         uses: actions/checkout@v2
 
-      - name: Checkout upstream repo 
+      - 
+        name: Checkout upstream repo 
         uses: actions/checkout@v2
         with:
           repository: tdlib/telegram-bot-api
