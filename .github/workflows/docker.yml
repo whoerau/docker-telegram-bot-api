@@ -60,11 +60,11 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: Build and push nezha-dashboard
+        name: Build and push telegram-bot-api
         uses: docker/build-push-action@v3
         with:
-          context: dashboard
-          file: dashboard/Dockerfile
+          context: .
+          file: Dockerfile
           platforms: linux/amd64, linux/arm64
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/telegram-bot-api:latest, ${{ secrets.DOCKERHUB_USERNAME }}/telegram-bot-api:${{ steps.download.outputs.latest_tag }}
